@@ -4,7 +4,7 @@ import React from 'react';
 export default function Pokedex() {
   return (
     <SafeAreaView>
-      <Text>Pokedex</Text>
+      <Text>Pokedex list</Text>
     </SafeAreaView>
   );
 }
