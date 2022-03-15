@@ -11,10 +11,21 @@ export async function getPokemonApi(endpointUrl) {
   }
 }
 
-export async function getPokemonDetailsApi(url) {
+export async function getPokemonDetailsByUrlApi(url) {
   try {
     const response = await fetch(url);
     const data = await response.json();
+    return data;
+  } catch (error) {
+    throw error;
+  }
+}
+
+export async function getPokemonDetailsApi(id) {
+  try {
+    const url = `${API_HOST}/pokemon/${id}`;
+    const response = await fetch(url);
+    const data = response.json();
     return data;
   } catch (error) {
     throw error;
